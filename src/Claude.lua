@@ -71,18 +71,10 @@ local function AddGlow(frame, color, size)
 end
 
 local function CreateGradient(parent, colors, rotation)
-    local defaultColors = {
+    local colorKeypoints = {
         ColorSequenceKeypoint.new(0, Colors.Background),
         ColorSequenceKeypoint.new(1, Colors.Secondary)
     }
-    
-    local colorKeypoints = colors or defaultColors
-    if colors and #colors == 2 and typeof(colors[1]) == "Color3" then
-        colorKeypoints = {
-            ColorSequenceKeypoint.new(0, colors[1]),
-            ColorSequenceKeypoint.new(1, colors[2])
-        }
-    end
     
     local gradient = CreateInstance("UIGradient", {
         Parent = parent,
