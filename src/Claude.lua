@@ -125,7 +125,7 @@ function Milk:CreateWindow(config)
         CornerRadius = UDim.new(0, 16)
     })
     
-    CreateGradient(MainFrame, {Colors.Background, Colors.Secondary})
+    CreateGradient(MainFrame)
     AddGlow(MainFrame, Colors.Glow, 30)
     
     -- Title Bar
